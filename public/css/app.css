@@ -34,13 +34,13 @@
     src: url(../fonts/alexandra_zeferino_one.ttf) format('truetype');
 }
 
-body{
-    background-color:blue;
-}
+/* body{
+
+} */
 
 .navbar .navbar-brand {
     font-family: 'Scriptin';
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     letter-spacing:4px
 }
@@ -48,10 +48,98 @@ body{
 .navbar .navbar-nav {
     font-family: 'Lora Regular';
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 4px;
 }
 .navbar-expand-md .navbar-nav .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
 }
+
+.dropbtn {
+	border: none;
+	cursor: pointer;
+  }
+  
+  .dropdown {
+	position: relative;
+	display:inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position:absolute;
+	background-color: rgba(249, 249, 249, 0.8);
+	min-width: 220px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+ 
+  
+  .dropdown-content .menu {
+	color: #64321b;
+	font-weight: bold;
+	padding: 12px 16px;
+	text-decoration: none;
+	/* display: block; */
+	cursor: pointer;
+	position: relative;
+  }
+  .menu .submenu{
+	display: none;
+	position:absolute;
+	background-color: rgba(249, 249, 249, 0.8);
+	min-width: 250px;
+	left:100%;
+	top: 0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);	
+  }
+  .submenu a {
+	color: #64321b;
+	font-weight: bold;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  @media screen and (max-width: 767px){
+	.dropdown {
+		position: relative;
+		display:block;
+	  }
+	  .dropdown-content {
+		display: none;
+		position:absolute;
+		background-color: rgba(249, 249, 249, 0.8);
+		min-width: 200px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 10;
+	  }
+	  .menu .submenu{
+		display: none;
+		position:relative;
+		float:none;
+		background-color: rgba(249, 249, 249, 0.8);
+		min-width: 200px;
+		left:0%;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);	
+	  }
+  }
+
+  .dropdown-content div:hover>.submenu{
+	  display: block;
+  }
+ 
+  .dropdown-content .menu:hover {background-color: rgba(241, 241, 241, 1)}
+  
+  .submenu a:hover{
+	  background-color: #64321b;
+	  color: rgba(241, 241, 241, 1);
+	}
+  
+  .dropdown:hover .dropdown-content {
+	display:block;
+  }
+  
+  .dropdown:hover .dropbtn {
+	background-color: #64321b;
+  }
