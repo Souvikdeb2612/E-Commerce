@@ -1,3 +1,57 @@
+@font-face {
+    font-family: 'Scriptin';
+    src: url(../fonts/scriptin.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Playfair Display Bold';
+    src: url(../fonts/playfairdisplay-bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Playfair Display Regular';
+    src: url(../fonts/playfairdisplay-regular.ttf) format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Lora Regular';
+    src: url(../fonts/Lora-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lora Bold';
+    src: url(../fonts/Lora-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url(../fonts/proximanova-regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Alexandra Zeferino One';
+    src: url(../fonts/alexandra_zeferino_one.ttf) format('truetype');
+}
+
 body{
     background-color:blue;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Scriptin';
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing:4px
+}
+
+.navbar .navbar-nav {
+    font-family: 'Lora Regular';
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
 }
