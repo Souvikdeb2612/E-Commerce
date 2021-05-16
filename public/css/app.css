@@ -39,12 +39,18 @@
 } */
 
 /* Navbar */
+.navbar{
+  padding-top: 1rem;
+  color: white;
+}
 
 .navbar .navbar-brand {
     font-family: 'Scriptin';
     font-size: 25px;
     font-weight: bold;
-    letter-spacing:4px
+    letter-spacing:4px;
+    padding-left: 25px;
+    /* color: white; */
 }
 
 .navbar .navbar-nav {
@@ -52,12 +58,22 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 4px;
-    font-weight: bold
+    font-weight: bold;
+    
 }
 .navbar-expand-md .navbar-nav .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
 }
+
+.btn{
+  color: white;
+}
+
+.socialbtn{
+  padding-right: 25px;
+}
+
 
 /* Dropdown Menu */
 .dropbtn {
@@ -167,4 +183,13 @@
       border-radius:25px;
       background-color: #64321b;
       color: white;
+  }
+
+  .bgcake{
+    background-image:url('../img/bgcake.jpg');background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    color: white;
+    letter-spacing: 4px;
   }

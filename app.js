@@ -30,7 +30,7 @@ app.use(productRoutes);
 
 
 app.get('/', (req,res)=>{
-    res.send("landing page");
+    res.render("home");
 })
 
 
