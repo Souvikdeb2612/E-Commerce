@@ -68,8 +68,12 @@
 
 .btn{
   color: white;
+  padding: 10px;
 }
-
+.btn:hover{
+  color: #64321b;
+  background-color:#ede0d4;
+}
 .socialbtn{
   padding-right: 25px;
 }
@@ -168,10 +172,12 @@
   /* Cards */
 
   .card{
+      flex: 0 0 300px;
       max-height: 420px;
       border-radius: 25px;
       overflow: hidden;
       margin:50px 0 25px 0;
+      box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 30%);
   }
 
   .card img{
@@ -183,6 +189,7 @@
       border-radius:25px;
       background-color: #64321b;
       color: white;
+      font-weight: bolder;
   }
 
   .bgcake{
@@ -192,4 +199,27 @@
     background-size: cover;
     color: white;
     letter-spacing: 4px;
+  }
+
+  .card-title{
+    text-align: center;
+    font-family: 'Scriptin';
+    font-weight: bolder;
+    letter-spacing: 4px;
+    padding-bottom: 60px;
+
+  }
+  .card-body{
+    padding: 0 20px 20px;
+  }
+
+  .card-heading{
+    font-family: 'Scriptin';
+    letter-spacing: 3px;
+    text-align: center;
+    font-size:50px;
+    font-weight:bolder; 
+    margin-top: 100px; 
+    letter-spacing:3px; 
+    padding:80px 0 10px 0;
   }
