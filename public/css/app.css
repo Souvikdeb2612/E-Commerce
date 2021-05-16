@@ -38,6 +38,8 @@
 
 } */
 
+/* Navbar */
+
 .navbar .navbar-brand {
     font-family: 'Scriptin';
     font-size: 25px;
@@ -50,12 +52,14 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 4px;
+    font-weight: bold
 }
 .navbar-expand-md .navbar-nav .nav-link {
     padding-right: .5rem;
     padding-left: .5rem;
 }
 
+/* Dropdown Menu */
 .dropbtn {
 	border: none;
 	cursor: pointer;
@@ -142,4 +146,25 @@
   
   .dropdown:hover .dropbtn {
 	background-color: #64321b;
+  }
+
+
+  /* Cards */
+
+  .card{
+      max-height: 420px;
+      border-radius: 25px;
+      overflow: hidden;
+      margin:50px 0 25px 0;
+  }
+
+  .card img{
+      max-height:250px;
+  }
+
+  .btn-card{
+      width: 100%;
+      border-radius:25px;
+      background-color: #64321b;
+      color: white;
   }

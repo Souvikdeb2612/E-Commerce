@@ -3,36 +3,41 @@ const Product = require('./models/product');
 
 const products= [
     {
+        category:"Chocolate Cakes",
         name:"ABC",
-        img:"https://images.unsplash.com/photo-1619703865029-c0a3b7df9454?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+        img:"https://media.bakingo.com/sites/default/files/round-shaped-chocolate-cake-2-cake0654choc-A.jpg?tr=w-320,h-240,q-70",
         price: 10000,
         desc: "lorem ipsum"
 
     },
     {
+        category:"Chocolate Cakes",
         name:"ABC",
-        img:"https://images.unsplash.com/photo-1619703865029-c0a3b7df9454?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+        img:"https://media.bakingo.com/sites/default/files/round-shaped-chocolate-cake-1-cake0653choc-A.jpg?tr=w-320,h-240,q-70",
         price: 10000,
         desc: "lorem ipsum"
 
     },
     {
+        category:"Chocolate Cakes",
         name:"ABC",
-        img:"https://images.unsplash.com/photo-1619703865029-c0a3b7df9454?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+        img:"https://media.bakingo.com/sites/default/files/chocolate-truffle-cake-cake1627choc-A_0.jpg?tr=w-320,h-240,q-70",
         price: 10000,
         desc: "lorem ipsum"
 
     },
     {
+        category:"Chocolate Cakes",
         name:"ABC",
-        img:"https://images.unsplash.com/photo-1619703865029-c0a3b7df9454?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+        img:"https://media.bakingo.com/sites/default/files/black-forest-cake-A.jpg?tr=w-320,h-240,q-70",
         price: 10000,
         desc: "lorem ipsum"
 
     },
     {
+        category:"Chocolate Cakes",
         name:"ABC",
-        img:"https://images.unsplash.com/photo-1619703865029-c0a3b7df9454?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80",
+        img:"https://media.bakingo.com/sites/default/files/kitkat-chocolate-cake-cake1119choc-A.jpg?tr=w-320,h-240,q-70",
         price: 10000,
         desc: "lorem ipsum"
 
