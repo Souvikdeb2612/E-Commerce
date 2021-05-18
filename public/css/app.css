@@ -42,8 +42,12 @@
 .navbar{
   padding-top: 1rem;
   color: white;
+  /* background-color:#64321b; */
 }
 
+.navbar2{
+  background-color: #64321b;
+}
 .navbar .navbar-brand {
     font-family: 'Scriptin';
     font-size: 25px;
@@ -70,15 +74,23 @@
   color: white;
   padding: 10px;
 }
-.btn:hover{
-  color: #64321b;
-  background-color:#ede0d4;
-}
+
+
 .socialbtn{
   padding-right: 25px;
 }
 
+.sbtn{
+  color:rgba(0,0,0,.9) ;
+}
 
+
+.fab:hover{
+  background-color:#64321b !important;
+  color: white;  
+}
+
+s
 /* Dropdown Menu */
 .dropbtn {
 	border: none;
@@ -166,6 +178,7 @@
   
   .dropdown:hover .dropbtn {
 	background-color: #64321b;
+  color: white !important;
   }
 
 
@@ -181,7 +194,7 @@
   }
 
   .card img{
-      max-height:250px;
+      max-height:223.5px;
   }
 
   .btn-card{
@@ -190,6 +203,11 @@
       background-color: #64321b;
       color: white;
       font-weight: bolder;
+  }
+
+  .btn-card:hover{
+    background-color:#ede0d4;
+    color:#64321b;
   }
 
   .bgcake{
