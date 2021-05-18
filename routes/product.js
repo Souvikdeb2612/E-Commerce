@@ -21,6 +21,7 @@ router.get('/products/:category', async(req,res)=>{
     const products = await Product.find({category : req.params.category}); 
     res.render('products/index', {products});
     
+    
 })
 
 
@@ -63,5 +64,17 @@ router.patch('/products/:id',async(req, res) => {
     }
 })
 
+
+// Delete a particular product
+router.delete('/products/:id',async (req, res) => {
+
+    try {
+        await Product.findByIdAndDelete(req.params.id);
+        res.redirect('/');
+    }
+    catch (e) {
+        console.log(e.message);
+    }
+})
 
 module.exports = router;
