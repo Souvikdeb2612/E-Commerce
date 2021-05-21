@@ -1,10 +1,11 @@
 const express=require('express');
 const router=express.Router();
 const Product = require('../models/product');
+const Review = require('../models/review');
 
 // Show products based on categories
 router.get('/products/:id/show', async(req,res)=>{
-    const product = await Product.findById(req.params.id); 
+    const product = await Product.findById(req.params.id).populate('reviews'); 
     res.render('products/show', {product});
     
 })
@@ -76,5 +77,23 @@ router.delete('/products/:id',async (req, res) => {
         console.log(e.message);
     }
 })
+
+
+// Creating a New Review on a Product
+
+router.post('/products/:id/review', async (req, res) => {
+    
+    const product = await Product.findById(req.params.id);
+    const review = new Review(req.body);
+    console.log(review);
+
+    product.reviews.push(review);
+
+    await review.save();
+    await product.save();
+
+    res.redirect(`/products/${req.params.id}/show`);
+})
+
 
 module.exports = router;
