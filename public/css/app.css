@@ -186,7 +186,7 @@ s
 
   .card{
       flex: 0 0 300px;
-      max-height: 420px;
+      /* max-height: 420px; */
       border-radius: 25px;
       overflow: hidden;
       margin:50px 0 25px 0;
@@ -240,4 +240,12 @@ s
     margin-top: 100px; 
     letter-spacing:3px; 
     padding:80px 0 10px 0;
+  }
+
+  button:focus{
+    outline: none;
+  }
+  .alert{
+    margin-bottom: 0;
+    border-radius: 0;
   }
