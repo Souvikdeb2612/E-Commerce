@@ -2,6 +2,7 @@ const express=require('express');
 const router=express.Router();
 const Product = require('../models/product');
 const Review = require('../models/review');
+const { isLoggedIn } = require('../middleware');
 
 // Show products based on categories
 router.get('/products/:id/show', async(req,res)=>{
@@ -18,7 +19,7 @@ router.get('/products/:id/show', async(req,res)=>{
 })
 
 // Get the form for adding new product
-router.get('/products/new', (req, res) => {
+router.get('/products/new', isLoggedIn, (req, res) => {
 
     res.render('products/new');
 })
@@ -42,7 +43,7 @@ router.get('/products/:category', async(req,res)=>{
 
 
 // Create New Product
-router.post('/products',async(req, res) => {
+router.post('/products',isLoggedIn,async(req, res) => {
 
     try {
         await Product.create(req.body.product);
@@ -58,7 +59,7 @@ router.post('/products',async(req, res) => {
 });
 
 // Get Product Edit form
-router.get('/products/:id/edit',async(req, res) => {
+router.get('/products/:id/edit',isLoggedIn,async(req, res) => {
 
     try {
         const product=await Product.findById(req.params.id);
@@ -71,7 +72,7 @@ router.get('/products/:id/edit',async(req, res) => {
 });
 
 // Upadate the particular product
-router.patch('/products/:id',async(req, res) => {
+router.patch('/products/:id',isLoggedIn,async(req, res) => {
     
     try {
         await Product.findByIdAndUpdate(req.params.id, req.body.product);
@@ -87,7 +88,7 @@ router.patch('/products/:id',async(req, res) => {
 
 
 // Delete a particular product
-router.delete('/products/:id',async (req, res) => {
+router.delete('/products/:id',isLoggedIn,async (req, res) => {
 
     try {
         await Product.findByIdAndDelete(req.params.id);
@@ -105,18 +106,21 @@ router.delete('/products/:id',async (req, res) => {
 
 // Creating a New Review on a Product
 
-router.post('/products/:id/review', async (req, res) => {
+router.post('/products/:id/review', isLoggedIn,async (req, res) => {
     try{
 
         const product = await Product.findById(req.params.id);
-        const review = new Review(req.body);
-        console.log(review);
+        const review = new Review({
+            user: req.user.username,
+            ...req.body
+        });
+        
     
         product.reviews.push(review);
     
         await review.save();
         await product.save();
-    
+        req.flash('success','Successfully added your review!')
         res.redirect(`/products/${req.params.id}/show`);
     }
     catch (e) {
