@@ -37,4 +37,16 @@ router.post('/user/:id/cart', isLoggedIn, async (req, res) => {
 });
 
 
+router.delete('/user/:userid/cart/:id', async(req, res) => {
+
+    const { userid, id } = req.params;
+    await User.findByIdAndUpdate(userid,{$pull:{cart:id}})
+    res.redirect(`/user/${req.user._id}/cart`);
+})
+
+router.get('/cart/payment', (req, res) => {
+    res.render('payment/payment')
+})
+
+
 module.exports = router;
