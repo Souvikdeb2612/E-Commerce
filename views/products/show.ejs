@@ -13,9 +13,13 @@
                   <h5 class="card-title"><%=product.name%></h5>
                   <p class="card-text"><%=product.desc%></p>
                   <a href="/products/<%= product._id %>/edit" class="btn btn-warning ">Edit</a>
+                    <form action="/user/<%=product._id%>/cart" method="POST">
+                      <button class="btn btn-primary">Add To Cart</button>
+                    </form>
+    
                     <form action="/products/<%=product._id%>?_method=DELETE" method="POST">
                         <button class="btn btn-danger">Delete</button>
-                  </form>
+                    </form>
               </div>
             </div>
             </div>
