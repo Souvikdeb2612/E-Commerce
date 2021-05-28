@@ -5,24 +5,23 @@
 
   <%- include("../partials/flash")%>
 
-  <h5 class="display-5">My Cart</h5>
+  <h4 class="display-4">My Cart</h4>
   
   <div class="row">
   <div class="col-lg-8">
 
   <%for(let item of userCart){%>
-        <div class="card mb-3" style="width: 90%; height: 150px;">
+        <div class="card mb-3" style="max-width: 90%;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="<%=item.img%>" alt="...">
+              <img style="width: 100%;"src="<%=item.img%>" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title"><%=item.name%></h5>
-                <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                <h5 class="text-left card-title"><%=item.name%></h5>
                 
                 <form action="/user/<%=currentUser._id%>/cart/<%=item._id%>?_method=DELETE" method="post">
-                  <button class="btn btn-sm btn-danger" style="float: right;">remove</button>
+                  <button class="btn btn-danger" ><i class="fas fa-trash"></i></button>
                 </form>
                 
                 
@@ -30,6 +29,7 @@
             </div>
           </div>
         </div>
+        
       <%}%>
 
       

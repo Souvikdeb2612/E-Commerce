@@ -10,7 +10,7 @@
                 <img src="<%=product.img%>" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><%=product.name%></h5>
-                  <p class="card-text"><%=product.desc%></p>
+                  <p class="card-text text-center font-weight-bold">&#8377;<%=product.price%></p>
                   <a href="/products/<%= product._id %>/show " class="btn btn-card ">KNOW MORE</a>
                 </div>
               </div>
@@ -20,4 +20,4 @@
     </div>
       
 </div>
-<%- include("../partials/footer") %> 
+<%- include("../partials/footer") %>  

@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -16,7 +20,8 @@ const productRoutes=require('./routes/product');
 const authRoutes = require('./routes/auth');
 const cartRoutes = require('./routes/cart');
 
-mongoose.connect('mongodb://localhost:27017/cakeDB', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false})
+
+mongoose.connect(process.env.DB_URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false})
     .then(() =>{
         console.log("DB connected");
     } )
@@ -71,6 +76,6 @@ app.use(authRoutes);
 app.use(cartRoutes);
 
 
-app.listen(8080, ()=>{
+app.listen(process.env.PORT || 8080, ()=>{
     console.log("Listening on port 8080");
 })

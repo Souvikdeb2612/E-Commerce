@@ -11,15 +11,17 @@
                 <img src="<%=product.img%>" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><%=product.name%></h5>
-                  <p class="card-text"><%=product.desc%></p>
-                  <a href="/products/<%= product._id %>/edit" class="btn btn-warning ">Edit</a>
-                    <form action="/user/<%=product._id%>/cart" method="POST">
+                  <p class="card-text text-center font-weight-bold mb-4">&#8377;<%=product.price%></p>
+                  <div class="text-center">
+                    <form class="mb-2" action="/user/<%=product._id%>/cart" method="POST">
                       <button class="btn btn-primary">Add To Cart</button>
                     </form>
-    
-                    <form action="/products/<%=product._id%>?_method=DELETE" method="POST">
-                        <button class="btn btn-danger">Delete</button>
-                    </form>
+                    <a href="/products/<%= product._id %>/edit" class="btn btn-warning ">Edit</a>
+                      <form class="d-inline"action="/products/<%=product._id%>?_method=DELETE" method="POST">
+                          <button class="btn btn-danger">Delete</button>
+                      </form>
+                  </div>
+                  
               </div>
             </div>
             </div>
